@@ -1,0 +1,50 @@
+git remote -v
+git remote add origin https://github.com/Surenkumar2476/devops-real-world-project-implementation-on-aws.git
+git remote set-url origin https://github.com/Surenkumar2476/devops-real-world-project-implementation-on-aws.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+git branch
+
+git config --global user.name "Your Name" → Set your username
+git config --global user.email "you@example.com" → Set your email
+git config --list → View current configuration
+
+git init → Initialize a new Git repository
+git clone <repo_url> → Copy a remote repository to your machine
+
+git status → Check current status of files
+git add <file> → Stage a file
+git add . → Stage all changes
+git commit -m "message" → Save changes with a message
+
+git log → View commit history
+git log --oneline → Compact commit history
+git diff → Show changes between commits or working directory
+
+
+git branch → List branches
+git branch <name> → Create a branch
+git checkout <branch> → Switch to a branch
+git checkout -b <name> → Create and switch to a branch
+git merge <branch> → Merge another branch into current
+
+git remote add origin <url> → Add a remote repo
+git push origin <branch> → Upload changes
+git pull → Fetch and merge changes
+git fetch → Fetch changes without merging
+
+git restore <file> → Discard changes in working directory
+git reset <file> → Unstage a file
+git reset --hard → Reset everything (⚠️ destructive)
+git revert <commit> → Undo a commit safely
+
+git stash → Temporarily save changes
+git stash pop → Reapply stashed changes
+git rebase <branch> → Reapply commits on top of another base
+
+
+git clone
+git add
+git commit
+git push
