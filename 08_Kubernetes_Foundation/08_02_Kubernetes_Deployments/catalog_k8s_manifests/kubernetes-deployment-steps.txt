@@ -1,0 +1,86 @@
+#Deployment
+
+apiVersion
+kind
+metadata
+  name
+  labels
+spec
+  replica
+  strategy
+  selector
+  template
+    metadata
+    spec
+      securityContext
+      containers
+        name
+        envFrom
+          configMapRef
+        securityContext
+        image
+        imagePullPolicy
+        port
+        readinessProbe
+        livenessProbe
+        resources
+          limits
+          requests
+
+
+#Pod
+
+apiVersion
+kind
+metadata
+  name
+  labels
+spec
+  containers
+    name
+    image
+    ports
+    resources
+      limits
+      requests
+    readinessProbe
+
+
+#Service
+
+apiVersion
+kind
+metadata
+  name
+  labels
+spec
+  type: ClusterIP, NodePort, LoadBalancer, ExternalName, Headless Service
+  selector
+  ports
+    name
+    port         - service port
+    targetPort   - container port
+    protocol
+
+
+#configmap
+
+apiVersion
+kind
+metadata
+data
+
+
+aws eks update-kubeconfig \
+  --region ap-south-1 \
+  --name <my-cluster>
+
+kubectl port-forward deployment/catalog 7080:8080
+kubectl scale deployment catalog --replicas=5
+kubectl rollout undo deployment/catalog --to-revision=<X>
+kubectl rollout history deployment/catalog
+kubectl get endpointslices
+kubectl apply -f catalog_k8s_manifests/
+kubectl exec -it <catalog-pod-name> -- env      
+
+
